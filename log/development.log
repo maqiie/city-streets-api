@@ -4239,3 +4239,136 @@ Completed 302 Found in 15ms (ActiveRecord: 8.3ms | Allocations: 4464)
 
 
   [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Started POST "/admin/products" for ::1 at 2023-09-05 12:03:12 +0300
+Processing by Admin::ProductsController#create as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "markpaulmuthuara@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:56:in `authenticate_admin!'
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.6ms | Allocations: 953)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: product):
+  
+app/controllers/admin/products_controller.rb:46:in `product_params'
+app/controllers/admin/products_controller.rb:15:in `create'
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/models/user.rb:3)
+Started POST "/admin/products" for ::1 at 2023-09-05 12:04:15 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Non-URL-safe CSRF tokens are deprecated. Use 6.1 defaults or above. (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/controllers/application_controller.rb:1)
+Processing by Admin::ProductsController#create as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "markpaulmuthuara@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:56:in `authenticate_admin!'
+Completed 400 Bad Request in 90ms (ActiveRecord: 0.9ms | Allocations: 30798)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: product):
+  
+app/controllers/admin/products_controller.rb:46:in `product_params'
+app/controllers/admin/products_controller.rb:15:in `create'
+Started POST "/admin/products" for ::1 at 2023-09-05 12:13:43 +0300
+Processing by Admin::ProductsController#create as */*
+  Parameters: {"product"=>{"name"=>"Product Name", "description"=>"Product Description", "price"=>29.99, "image_url"=>"https://example.com/image.jpg", "shoe_type"=>"Running", "shoe_design"=>"Athletic", "gender"=>"Men", "style"=>"Casual", "brand_id"=>1}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "markpaulmuthuara@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:56:in `authenticate_admin!'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/products_controller.rb:16:in `create'
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:16:in `create'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "shoe_type", "shoe_design", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Product Name"], ["description", "Product Description"], ["price", 29.99], ["image_url", "https://example.com/image.jpg"], ["shoe_type", "Running"], ["shoe_design", "Athletic"], ["created_at", "2023-09-05 09:13:43.818335"], ["updated_at", "2023-09-05 09:13:43.818335"], ["brand_id", 1], ["gender", "Men"]]
+  ↳ app/controllers/admin/products_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admin/products_controller.rb:16:in `create'
+Redirected to http://localhost:3000/admin/products
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 302 Found in 85ms (ActiveRecord: 15.3ms | Allocations: 27547)
+
+
+Started GET "/admin/products" for ::1 at 2023-09-05 12:13:43 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/admin/products"):
+  
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/models/user.rb:3)
+Started POST "/admin/products" for ::1 at 2023-09-05 12:14:29 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Non-URL-safe CSRF tokens are deprecated. Use 6.1 defaults or above. (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/controllers/application_controller.rb:1)
+Processing by Admin::ProductsController#create as */*
+  Parameters: {"product"=>{"name"=>"Product Name", "description"=>"Product Description", "price"=>29.99, "image_url"=>"https://example.com/image.jpg", "shoe_type"=>"Running", "shoe_design"=>"Athletic", "gender"=>"Men", "style"=>"Casual", "brand_id"=>1}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "markpaulmuthuara@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:56:in `authenticate_admin!'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/products_controller.rb:16:in `create'
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:16:in `create'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "shoe_type", "shoe_design", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Product Name"], ["description", "Product Description"], ["price", 29.99], ["image_url", "https://example.com/image.jpg"], ["shoe_type", "Running"], ["shoe_design", "Athletic"], ["created_at", "2023-09-05 09:14:29.652335"], ["updated_at", "2023-09-05 09:14:29.652335"], ["brand_id", 1], ["gender", "Men"]]
+  ↳ app/controllers/admin/products_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admin/products_controller.rb:16:in `create'
+Redirected to http://localhost:3000/admin/products
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 302 Found in 133ms (ActiveRecord: 15.2ms | Allocations: 57503)
+
+
+Started GET "/admin/products" for ::1 at 2023-09-05 12:14:29 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/admin/products"):
+  
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/models/user.rb:3)
+Started POST "/admin/products" for ::1 at 2023-09-05 12:19:25 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Non-URL-safe CSRF tokens are deprecated. Use 6.1 defaults or above. (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/controllers/application_controller.rb:1)
+Processing by Admin::ProductsController#create as */*
+  Parameters: {"product"=>{"name"=>"Product Name", "description"=>"Product Description", "price"=>29.99, "image_url"=>"https://example.com/image.jpg", "shoe_type"=>"Running", "shoe_design"=>"Athletic", "gender"=>"Men", "style"=>"Casual", "brand_id"=>1}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "markpaulmuthuara@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:65:in `authenticate_admin!'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/products_controller.rb:24:in `create'
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:24:in `create'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "shoe_type", "shoe_design", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Product Name"], ["description", "Product Description"], ["price", 29.99], ["image_url", "https://example.com/image.jpg"], ["shoe_type", "Running"], ["shoe_design", "Athletic"], ["created_at", "2023-09-05 09:19:25.335071"], ["updated_at", "2023-09-05 09:19:25.335071"], ["brand_id", 1], ["gender", "Men"]]
+  ↳ app/controllers/admin/products_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admin/products_controller.rb:24:in `create'
+No template found for Admin::ProductsController#create, rendering head :no_content
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 204 No Content in 139ms (ActiveRecord: 14.9ms | Allocations: 58032)
+
+
+Started POST "/admin/products" for ::1 at 2023-09-05 12:22:36 +0300
+Processing by Admin::ProductsController#create as */*
+  Parameters: {"product"=>{"name"=>"Product Name", "description"=>"Product Description", "price"=>29.99, "image_url"=>"https://example.com/image.jpg", "shoe_type"=>"Running", "shoe_design"=>"Athletic", "gender"=>"Men", "style"=>"Casual", "brand_id"=>1}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "markpaulmuthuara@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:74:in `authenticate_admin!'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/products_controller.rb:32:in `create'
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:32:in `create'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "shoe_type", "shoe_design", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Product Name"], ["description", "Product Description"], ["price", 29.99], ["image_url", "https://example.com/image.jpg"], ["shoe_type", "Running"], ["shoe_design", "Athletic"], ["created_at", "2023-09-05 09:22:36.341070"], ["updated_at", "2023-09-05 09:22:36.341070"], ["brand_id", 1], ["gender", "Men"]]
+  ↳ app/controllers/admin/products_controller.rb:32:in `create'
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admin/products_controller.rb:32:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 201 Created in 112ms (Views: 0.5ms | ActiveRecord: 7.7ms | Allocations: 20687)
+
+

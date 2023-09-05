@@ -11,14 +11,32 @@ class Admin::ProductsController < ApplicationController
     @product = Product.new
   end
 
+  # def create
+  #   @product = Product.new(product_params)
+  #   if @product.save
+  #     redirect_to admin_products_path, notice: 'Product was successfully created.'
+  #   else
+  #     render :new
+  #   end
+  # end
+  # def create
+  #   @product = Product.new(product_params)
+  #   if @product.save
+  #     flash[:notice] = 'Product was successfully created.'
+  #   else
+  #     render :new
+  #   end
+  # end
   def create
     @product = Product.new(product_params)
     if @product.save
-      redirect_to admin_products_path, notice: 'Product was successfully created.'
+      render json: { message: 'Product was successfully created.', product: @product }, status: :created
     else
-      render :new
+      render json: { errors: @product.errors.full_messages }, status: :unprocessable_entity
     end
   end
+  
+  
 
   def edit
   end
