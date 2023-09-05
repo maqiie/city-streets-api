@@ -8,4 +8,14 @@ Rails.application.routes.draw do
   
   post 'carts/add_item', to: 'carts#add_item'
   delete 'carts/remove_item', to: 'carts#remove_item'
+
+
+  # namespace :admin do
+  #   resources :products
+  # end
+  namespace :admin do
+    resources :products, only: [:new, :create]
+  end
+  
+  
 end

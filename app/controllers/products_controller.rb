@@ -25,15 +25,15 @@ class ProductsController < ApplicationController
     end
   
     # POST /products
-    def create
-      @product = Product.new(product_params)
+    # def create
+    #   @product = Product.new(product_params)
   
-      if @product.save
-        render json: @product, status: :created
-      else
-        render json: @product.errors, status: :unprocessable_entity
-      end
-    end
+    #   if @product.save
+    #     render json: @product, status: :created
+    #   else
+    #     render json: @product.errors, status: :unprocessable_entity
+    #   end
+    # end
   
     private
   
