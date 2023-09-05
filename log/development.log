@@ -458,3 +458,668 @@ Migrating to AddGenderToProducts (20230905075318)
   [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/models/user.rb:3)
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Abshire-Rutherford"], ["created_at", "2023-09-05 07:56:15.727793"], ["updated_at", "2023-09-05 07:56:15.727793"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Anderson-McGlynn"], ["created_at", "2023-09-05 07:56:15.741070"], ["updated_at", "2023-09-05 07:56:15.741070"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Schumm Inc"], ["created_at", "2023-09-05 07:56:15.750766"], ["updated_at", "2023-09-05 07:56:15.750766"]]
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Larkin LLC"], ["created_at", "2023-09-05 07:56:15.759367"], ["updated_at", "2023-09-05 07:56:15.759367"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Kshlerin-Jacobson"], ["created_at", "2023-09-05 07:56:15.768302"], ["updated_at", "2023-09-05 07:56:15.768302"]]
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Enormous Linen Wallet"], ["description", "Sed quia voluptas minus."], ["price", 192.87], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 07:56:15.807933"], ["updated_at", "2023-09-05 07:56:15.807933"], ["brand_id", 14], ["gender", "Women"]]
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Enormous Marble Watch"], ["description", "Quia animi voluptatem officiis."], ["price", 179.91], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 07:56:15.820422"], ["updated_at", "2023-09-05 07:56:15.820422"], ["brand_id", 9], ["gender", "Women"]]
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Small Wooden Plate"], ["description", "Quia aut error et."], ["price", 113.83], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 07:56:15.834503"], ["updated_at", "2023-09-05 07:56:15.834503"], ["brand_id", 2], ["gender", "Men"]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Fantastic Aluminum Gloves"], ["description", "Non enim hic sit."], ["price", 120.39], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 07:56:15.843065"], ["updated_at", "2023-09-05 07:56:15.843065"], ["brand_id", 18], ["gender", "Women"]]
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Synergistic Wooden Clock"], ["description", "Reprehenderit molestiae eaque recusandae."], ["price", 199.01], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 07:56:15.851100"], ["updated_at", "2023-09-05 07:56:15.851100"], ["brand_id", 18], ["gender", "Women"]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Fantastic Iron Bottle"], ["description", "Vel quis quia est."], ["price", 82.68], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 07:56:15.859448"], ["updated_at", "2023-09-05 07:56:15.859448"], ["brand_id", 9], ["gender", "Men"]]
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ergonomic Marble Shirt"], ["description", "Veritatis et dicta qui."], ["price", 143.24], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 07:56:15.867784"], ["updated_at", "2023-09-05 07:56:15.867784"], ["brand_id", 1], ["gender", "Men"]]
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Enormous Steel Coat"], ["description", "Aut repudiandae repellendus eaque."], ["price", 192.96], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 07:56:15.876741"], ["updated_at", "2023-09-05 07:56:15.876741"], ["brand_id", 9], ["gender", "Men"]]
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Durable Linen Keyboard"], ["description", "Eaque optio et quo."], ["price", 93.35], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 07:56:15.885304"], ["updated_at", "2023-09-05 07:56:15.885304"], ["brand_id", 10], ["gender", "Women"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ergonomic Wooden Bottle"], ["description", "Ea aliquid reprehenderit incidunt."], ["price", 90.26], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 07:56:15.893683"], ["updated_at", "2023-09-05 07:56:15.893683"], ["brand_id", 20], ["gender", "Men"]]
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/models/user.rb:3)
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/models/user.rb:3)
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_attachments"[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" datetime(6) NOT NULL)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_blobs"[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "service_name" varchar NOT NULL, "byte_size" bigint NOT NULL, "checksum" varchar, "created_at" datetime(6) NOT NULL)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_variant_records"[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "blob_id" bigint NOT NULL, "variation_digest" varchar NOT NULL)[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "brands"[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "brands" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "cart_items"[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "cart_items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "cart_id" integer NOT NULL, "product_id" integer NOT NULL, "quantity" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE INDEX "index_cart_items_on_cart_id" ON "cart_items" ("cart_id")[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE INDEX "index_cart_items_on_product_id" ON "cart_items" ("product_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "carts"[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "carts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE INDEX "index_carts_on_user_id" ON "carts" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "posts"[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "products"[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "price" decimal, "image_url" varchar, "shoe_type" varchar, "shoe_design" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "brand_id" integer NOT NULL, "gender" varchar)[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE INDEX "index_products_on_brand_id" ON "products" ("brand_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "provider" varchar DEFAULT 'email' NOT NULL, "uid" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "allow_password_change" boolean DEFAULT 0, "remember_created_at" datetime(6), "confirmation_token" varchar, "confirmed_at" datetime(6), "confirmation_sent_at" datetime(6), "unconfirmed_email" varchar, "name" varchar, "nickname" varchar, "image" varchar, "email" varchar, "tokens" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "role" integer)[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_uid_and_provider" ON "users" ("uid", "provider")[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aactive_storage_attachments" ("id" integer NOT NULL PRIMARY KEY, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" integer NOT NULL, "blob_id" integer NOT NULL, "created_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_aactive_storage_attachments_uniqueness" ON "aactive_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_aactive_storage_attachments_on_blob_id" ON "aactive_storage_attachments" ("blob_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aactive_storage_attachments" ("id","name","record_type","record_id","blob_id","created_at")
+                     SELECT "id","name","record_type","record_id","blob_id","created_at" FROM "active_storage_attachments"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "active_storage_attachments"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer NOT NULL PRIMARY KEY, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" integer NOT NULL, "blob_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("id","name","record_type","record_id","blob_id","created_at")
+                     SELECT "id","name","record_type","record_id","blob_id","created_at" FROM "aactive_storage_attachments"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aactive_storage_attachments"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aactive_storage_variant_records" ("id" integer NOT NULL PRIMARY KEY, "blob_id" integer NOT NULL, "variation_digest" varchar NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_aactive_storage_variant_records_uniqueness" ON "aactive_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aactive_storage_variant_records" ("id","blob_id","variation_digest")
+                     SELECT "id","blob_id","variation_digest" FROM "active_storage_variant_records"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "active_storage_variant_records"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" integer NOT NULL PRIMARY KEY, "blob_id" integer NOT NULL, "variation_digest" varchar NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "active_storage_variant_records" ("id","blob_id","variation_digest")
+                     SELECT "id","blob_id","variation_digest" FROM "aactive_storage_variant_records"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aactive_storage_variant_records"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "acart_items" ("id" integer NOT NULL PRIMARY KEY, "cart_id" integer NOT NULL, "product_id" integer NOT NULL, "quantity" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_acart_items_on_product_id" ON "acart_items" ("product_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_acart_items_on_cart_id" ON "acart_items" ("cart_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "acart_items" ("id","cart_id","product_id","quantity","created_at","updated_at")
+                     SELECT "id","cart_id","product_id","quantity","created_at","updated_at" FROM "cart_items"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "cart_items"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "cart_items" ("id" integer NOT NULL PRIMARY KEY, "cart_id" integer NOT NULL, "product_id" integer NOT NULL, "quantity" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_6cdb1f0139"
+FOREIGN KEY ("cart_id")
+  REFERENCES "carts" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_cart_items_on_cart_id" ON "cart_items" ("cart_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_cart_items_on_product_id" ON "cart_items" ("product_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "cart_items" ("id","cart_id","product_id","quantity","created_at","updated_at")
+                     SELECT "id","cart_id","product_id","quantity","created_at","updated_at" FROM "acart_items"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "acart_items"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "acart_items" ("id" integer NOT NULL PRIMARY KEY, "cart_id" integer NOT NULL, "product_id" integer NOT NULL, "quantity" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_acart_items_on_product_id" ON "acart_items" ("product_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_acart_items_on_cart_id" ON "acart_items" ("cart_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "acart_items" ("id","cart_id","product_id","quantity","created_at","updated_at")
+                     SELECT "id","cart_id","product_id","quantity","created_at","updated_at" FROM "cart_items"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "cart_items"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "cart_items" ("id" integer NOT NULL PRIMARY KEY, "cart_id" integer NOT NULL, "product_id" integer NOT NULL, "quantity" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_6cdb1f0139"
+FOREIGN KEY ("cart_id")
+  REFERENCES "carts" ("id")
+, CONSTRAINT "fk_rails_681a180e84"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_cart_items_on_cart_id" ON "cart_items" ("cart_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_cart_items_on_product_id" ON "cart_items" ("product_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "cart_items" ("id","cart_id","product_id","quantity","created_at","updated_at")
+                     SELECT "id","cart_id","product_id","quantity","created_at","updated_at" FROM "acart_items"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "acart_items"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "acarts" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_acarts_on_user_id" ON "acarts" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "acarts" ("id","user_id","created_at","updated_at")
+                     SELECT "id","user_id","created_at","updated_at" FROM "carts"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "carts"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "carts" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_ea59a35211"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_carts_on_user_id" ON "carts" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "carts" ("id","user_id","created_at","updated_at")
+                     SELECT "id","user_id","created_at","updated_at" FROM "acarts"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "acarts"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aproducts" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "description" text DEFAULT NULL, "price" decimal DEFAULT NULL, "image_url" varchar DEFAULT NULL, "shoe_type" varchar DEFAULT NULL, "shoe_design" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "brand_id" integer NOT NULL, "gender" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aproducts_on_brand_id" ON "aproducts" ("brand_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aproducts" ("id","name","description","price","image_url","shoe_type","shoe_design","created_at","updated_at","brand_id","gender")
+                     SELECT "id","name","description","price","image_url","shoe_type","shoe_design","created_at","updated_at","brand_id","gender" FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "products"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "description" text DEFAULT NULL, "price" decimal DEFAULT NULL, "image_url" varchar DEFAULT NULL, "shoe_type" varchar DEFAULT NULL, "shoe_design" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "brand_id" integer NOT NULL, "gender" varchar DEFAULT NULL, CONSTRAINT "fk_rails_f3b4d49caa"
+FOREIGN KEY ("brand_id")
+  REFERENCES "brands" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_products_on_brand_id" ON "products" ("brand_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "products" ("id","name","description","price","image_url","shoe_type","shoe_design","created_at","updated_at","brand_id","gender")
+                     SELECT "id","name","description","price","image_url","shoe_type","shoe_design","created_at","updated_at","brand_id","gender" FROM "aproducts"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aproducts"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230905075318)[0m
+  [1m[35m (4.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230819204134),
+(20230821020342),
+(20230821021958),
+(20230821023831),
+(20230905071111),
+(20230905071115),
+(20230905071117),
+(20230905073106),
+(20230905074902);
+
+[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-09-05 08:01:31.203646"], ["updated_at", "2023-09-05 08:01:31.203646"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "088b728d8ac9e172ece329ad69805568b5f5cf35"], ["created_at", "2023-09-05 08:01:31.215741"], ["updated_at", "2023-09-05 08:01:31.215741"]]
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_attachments"[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" datetime(6) NOT NULL)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_blobs"[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "service_name" varchar NOT NULL, "byte_size" bigint NOT NULL, "checksum" varchar, "created_at" datetime(6) NOT NULL)[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_variant_records"[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "blob_id" bigint NOT NULL, "variation_digest" varchar NOT NULL)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "brands"[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "brands" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "cart_items"[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "cart_items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "cart_id" integer NOT NULL, "product_id" integer NOT NULL, "quantity" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE INDEX "index_cart_items_on_cart_id" ON "cart_items" ("cart_id")[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE INDEX "index_cart_items_on_product_id" ON "cart_items" ("product_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "carts"[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "carts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE INDEX "index_carts_on_user_id" ON "carts" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "posts"[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "products"[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "price" decimal, "image_url" varchar, "shoe_type" varchar, "shoe_design" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "brand_id" integer NOT NULL, "gender" varchar)[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE INDEX "index_products_on_brand_id" ON "products" ("brand_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "provider" varchar DEFAULT 'email' NOT NULL, "uid" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "allow_password_change" boolean DEFAULT 0, "remember_created_at" datetime(6), "confirmation_token" varchar, "confirmed_at" datetime(6), "confirmation_sent_at" datetime(6), "unconfirmed_email" varchar, "name" varchar, "nickname" varchar, "image" varchar, "email" varchar, "tokens" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "role" integer)[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_uid_and_provider" ON "users" ("uid", "provider")[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aactive_storage_attachments" ("id" integer NOT NULL PRIMARY KEY, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" integer NOT NULL, "blob_id" integer NOT NULL, "created_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_aactive_storage_attachments_uniqueness" ON "aactive_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aactive_storage_attachments_on_blob_id" ON "aactive_storage_attachments" ("blob_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aactive_storage_attachments" ("id","name","record_type","record_id","blob_id","created_at")
+                     SELECT "id","name","record_type","record_id","blob_id","created_at" FROM "active_storage_attachments"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "active_storage_attachments"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer NOT NULL PRIMARY KEY, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" integer NOT NULL, "blob_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("id","name","record_type","record_id","blob_id","created_at")
+                     SELECT "id","name","record_type","record_id","blob_id","created_at" FROM "aactive_storage_attachments"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aactive_storage_attachments"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aactive_storage_variant_records" ("id" integer NOT NULL PRIMARY KEY, "blob_id" integer NOT NULL, "variation_digest" varchar NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_aactive_storage_variant_records_uniqueness" ON "aactive_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aactive_storage_variant_records" ("id","blob_id","variation_digest")
+                     SELECT "id","blob_id","variation_digest" FROM "active_storage_variant_records"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "active_storage_variant_records"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" integer NOT NULL PRIMARY KEY, "blob_id" integer NOT NULL, "variation_digest" varchar NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "active_storage_variant_records" ("id","blob_id","variation_digest")
+                     SELECT "id","blob_id","variation_digest" FROM "aactive_storage_variant_records"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aactive_storage_variant_records"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "acart_items" ("id" integer NOT NULL PRIMARY KEY, "cart_id" integer NOT NULL, "product_id" integer NOT NULL, "quantity" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_acart_items_on_product_id" ON "acart_items" ("product_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_acart_items_on_cart_id" ON "acart_items" ("cart_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "acart_items" ("id","cart_id","product_id","quantity","created_at","updated_at")
+                     SELECT "id","cart_id","product_id","quantity","created_at","updated_at" FROM "cart_items"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "cart_items"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "cart_items" ("id" integer NOT NULL PRIMARY KEY, "cart_id" integer NOT NULL, "product_id" integer NOT NULL, "quantity" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_6cdb1f0139"
+FOREIGN KEY ("cart_id")
+  REFERENCES "carts" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_cart_items_on_cart_id" ON "cart_items" ("cart_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_cart_items_on_product_id" ON "cart_items" ("product_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "cart_items" ("id","cart_id","product_id","quantity","created_at","updated_at")
+                     SELECT "id","cart_id","product_id","quantity","created_at","updated_at" FROM "acart_items"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "acart_items"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "acart_items" ("id" integer NOT NULL PRIMARY KEY, "cart_id" integer NOT NULL, "product_id" integer NOT NULL, "quantity" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_acart_items_on_product_id" ON "acart_items" ("product_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_acart_items_on_cart_id" ON "acart_items" ("cart_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "acart_items" ("id","cart_id","product_id","quantity","created_at","updated_at")
+                     SELECT "id","cart_id","product_id","quantity","created_at","updated_at" FROM "cart_items"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "cart_items"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "cart_items" ("id" integer NOT NULL PRIMARY KEY, "cart_id" integer NOT NULL, "product_id" integer NOT NULL, "quantity" integer DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_6cdb1f0139"
+FOREIGN KEY ("cart_id")
+  REFERENCES "carts" ("id")
+, CONSTRAINT "fk_rails_681a180e84"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_cart_items_on_cart_id" ON "cart_items" ("cart_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_cart_items_on_product_id" ON "cart_items" ("product_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "cart_items" ("id","cart_id","product_id","quantity","created_at","updated_at")
+                     SELECT "id","cart_id","product_id","quantity","created_at","updated_at" FROM "acart_items"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "acart_items"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "acarts" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_acarts_on_user_id" ON "acarts" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "acarts" ("id","user_id","created_at","updated_at")
+                     SELECT "id","user_id","created_at","updated_at" FROM "carts"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "carts"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "carts" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_ea59a35211"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_carts_on_user_id" ON "carts" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "carts" ("id","user_id","created_at","updated_at")
+                     SELECT "id","user_id","created_at","updated_at" FROM "acarts"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "acarts"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aproducts" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "description" text DEFAULT NULL, "price" decimal DEFAULT NULL, "image_url" varchar DEFAULT NULL, "shoe_type" varchar DEFAULT NULL, "shoe_design" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "brand_id" integer NOT NULL, "gender" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aproducts_on_brand_id" ON "aproducts" ("brand_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "aproducts" ("id","name","description","price","image_url","shoe_type","shoe_design","created_at","updated_at","brand_id","gender")
+                     SELECT "id","name","description","price","image_url","shoe_type","shoe_design","created_at","updated_at","brand_id","gender" FROM "products"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "description" text DEFAULT NULL, "price" decimal DEFAULT NULL, "image_url" varchar DEFAULT NULL, "shoe_type" varchar DEFAULT NULL, "shoe_design" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "brand_id" integer NOT NULL, "gender" varchar DEFAULT NULL, CONSTRAINT "fk_rails_f3b4d49caa"
+FOREIGN KEY ("brand_id")
+  REFERENCES "brands" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_products_on_brand_id" ON "products" ("brand_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "products" ("id","name","description","price","image_url","shoe_type","shoe_design","created_at","updated_at","brand_id","gender")
+                     SELECT "id","name","description","price","image_url","shoe_type","shoe_design","created_at","updated_at","brand_id","gender" FROM "aproducts"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aproducts"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230905075318)[0m
+  [1m[35m (5.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230819204134),
+(20230821020342),
+(20230821021958),
+(20230821023831),
+(20230905071111),
+(20230905071115),
+(20230905071117),
+(20230905073106),
+(20230905074902);
+
+[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-09-05 08:01:31.554581"], ["updated_at", "2023-09-05 08:01:31.554581"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2023-09-05 08:01:31.565160"], ["key", "environment"]]
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "088b728d8ac9e172ece329ad69805568b5f5cf35"], ["created_at", "2023-09-05 08:01:31.574721"], ["updated_at", "2023-09-05 08:01:31.574721"]]
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Nike"], ["created_at", "2023-09-05 08:01:31.599591"], ["updated_at", "2023-09-05 08:01:31.599591"]]
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Adidas"], ["created_at", "2023-09-05 08:01:31.607240"], ["updated_at", "2023-09-05 08:01:31.607240"]]
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Etec"], ["created_at", "2023-09-05 08:01:31.614324"], ["updated_at", "2023-09-05 08:01:31.614324"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Puma"], ["created_at", "2023-09-05 08:01:31.621686"], ["updated_at", "2023-09-05 08:01:31.621686"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Reebok"], ["created_at", "2023-09-05 08:01:31.629185"], ["updated_at", "2023-09-05 08:01:31.629185"]]
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "New Balance"], ["created_at", "2023-09-05 08:01:31.637037"], ["updated_at", "2023-09-05 08:01:31.637037"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Converse"], ["created_at", "2023-09-05 08:01:31.645090"], ["updated_at", "2023-09-05 08:01:31.645090"]]
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Under Armour"], ["created_at", "2023-09-05 08:01:31.654133"], ["updated_at", "2023-09-05 08:01:31.654133"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Vans"], ["created_at", "2023-09-05 08:01:31.662559"], ["updated_at", "2023-09-05 08:01:31.662559"]]
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lightweight Silk Shoes"], ["description", "Minima maxime laudantium eos."], ["price", 85.23], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 08:01:32.650595"], ["updated_at", "2023-09-05 08:01:32.650595"], ["brand_id", 4], ["gender", "Men"]]
+  [1m[36mTRANSACTION (12.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Intelligent Paper Computer"], ["description", "Quo amet qui ducimus."], ["price", 124.67], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 08:01:32.666792"], ["updated_at", "2023-09-05 08:01:32.666792"], ["brand_id", 7], ["gender", "Men"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Small Silk Pants"], ["description", "Expedita officia velit id."], ["price", 90.02], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 08:01:32.674959"], ["updated_at", "2023-09-05 08:01:32.674959"], ["brand_id", 5], ["gender", "Women"]]
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lightweight Wool Coat"], ["description", "Voluptates voluptatibus iste consectetur."], ["price", 185.58], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 08:01:32.683245"], ["updated_at", "2023-09-05 08:01:32.683245"], ["brand_id", 3], ["gender", "Women"]]
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Intelligent Linen Gloves"], ["description", "Cum culpa alias voluptatem."], ["price", 149.05], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 08:01:32.691964"], ["updated_at", "2023-09-05 08:01:32.691964"], ["brand_id", 3], ["gender", "Men"]]
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Synergistic Granite Table"], ["description", "Illo blanditiis nulla rerum."], ["price", 86.1], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 08:01:32.700827"], ["updated_at", "2023-09-05 08:01:32.700827"], ["brand_id", 6], ["gender", "Women"]]
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Incredible Leather Bag"], ["description", "Qui ea molestias molestiae."], ["price", 81.46], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 08:01:32.709685"], ["updated_at", "2023-09-05 08:01:32.709685"], ["brand_id", 7], ["gender", "Men"]]
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rustic Copper Shoes"], ["description", "Et delectus molestias ipsum."], ["price", 90.16], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 08:01:32.719438"], ["updated_at", "2023-09-05 08:01:32.719438"], ["brand_id", 3], ["gender", "Men"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Gorgeous Plastic Computer"], ["description", "Cum temporibus a laborum."], ["price", 97.26], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 08:01:32.728784"], ["updated_at", "2023-09-05 08:01:32.728784"], ["brand_id", 5], ["gender", "Men"]]
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Synergistic Marble Computer"], ["description", "Itaque iure saepe molestiae."], ["price", 118.02], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 08:01:32.737433"], ["updated_at", "2023-09-05 08:01:32.737433"], ["brand_id", 4], ["gender", "Women"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/models/user.rb:3)
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Nike"], ["created_at", "2023-09-05 08:01:48.806464"], ["updated_at", "2023-09-05 08:01:48.806464"]]
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Adidas"], ["created_at", "2023-09-05 08:01:48.814038"], ["updated_at", "2023-09-05 08:01:48.814038"]]
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Etec"], ["created_at", "2023-09-05 08:01:48.820527"], ["updated_at", "2023-09-05 08:01:48.820527"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Puma"], ["created_at", "2023-09-05 08:01:48.827197"], ["updated_at", "2023-09-05 08:01:48.827197"]]
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrand Create (0.1ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Reebok"], ["created_at", "2023-09-05 08:01:48.834150"], ["updated_at", "2023-09-05 08:01:48.834150"]]
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrand Create (0.2ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "New Balance"], ["created_at", "2023-09-05 08:01:48.841291"], ["updated_at", "2023-09-05 08:01:48.841291"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrand Create (0.3ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Converse"], ["created_at", "2023-09-05 08:01:48.850169"], ["updated_at", "2023-09-05 08:01:48.850169"]]
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrand Create (0.3ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Under Armour"], ["created_at", "2023-09-05 08:01:48.859718"], ["updated_at", "2023-09-05 08:01:48.859718"]]
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBrand Create (0.3ms)[0m  [1m[32mINSERT INTO "brands" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Vans"], ["created_at", "2023-09-05 08:01:48.868897"], ["updated_at", "2023-09-05 08:01:48.868897"]]
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.4ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Synergistic Iron Wallet"], ["description", "Quis rerum voluptatum ut."], ["price", 179.55], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 08:01:49.921235"], ["updated_at", "2023-09-05 08:01:49.921235"], ["brand_id", 13], ["gender", "Men"]]
+  [1m[36mTRANSACTION (9.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mediocre Concrete Bag"], ["description", "In voluptatem deserunt tempore."], ["price", 167.55], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 08:01:49.934911"], ["updated_at", "2023-09-05 08:01:49.934911"], ["brand_id", 9], ["gender", "Women"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mediocre Iron Keyboard"], ["description", "Est cupiditate qui voluptatem."], ["price", 142.86], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 08:01:49.942870"], ["updated_at", "2023-09-05 08:01:49.942870"], ["brand_id", 3], ["gender", "Women"]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sleek Copper Bench"], ["description", "Atque saepe consequatur omnis."], ["price", 155.71], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 08:01:49.951725"], ["updated_at", "2023-09-05 08:01:49.951725"], ["brand_id", 2], ["gender", "Women"]]
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Intelligent Iron Keyboard"], ["description", "Quam quisquam saepe animi."], ["price", 56.24], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 08:01:49.959768"], ["updated_at", "2023-09-05 08:01:49.959768"], ["brand_id", 8], ["gender", "Men"]]
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Small Aluminum Wallet"], ["description", "Repellat fugiat ea sit."], ["price", 108.92], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 08:01:49.968310"], ["updated_at", "2023-09-05 08:01:49.968310"], ["brand_id", 2], ["gender", "Men"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rustic Bronze Wallet"], ["description", "Fugiat error et eveniet."], ["price", 67.96], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 08:01:49.979000"], ["updated_at", "2023-09-05 08:01:49.979000"], ["brand_id", 5], ["gender", "Men"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Small Rubber Hat"], ["description", "Blanditiis sit natus eveniet."], ["price", 86.29], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 08:01:49.989926"], ["updated_at", "2023-09-05 08:01:49.989926"], ["brand_id", 17], ["gender", "Women"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Incredible Bronze Clock"], ["description", "Ratione at molestias vero."], ["price", 197.52], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 08:01:49.999883"], ["updated_at", "2023-09-05 08:01:49.999883"], ["brand_id", 18], ["gender", "Women"]]
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "description", "price", "image_url", "created_at", "updated_at", "brand_id", "gender") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Fantastic Plastic Shirt"], ["description", "Iure et corporis amet."], ["price", 165.61], ["image_url", "http://example.com/image.jpg"], ["created_at", "2023-09-05 08:01:50.010709"], ["updated_at", "2023-09-05 08:01:50.010709"], ["brand_id", 8], ["gender", "Men"]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/models/user.rb:3)
+Started POST "/auth" for 127.0.0.1 at 2023-09-05 11:03:49 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Non-URL-safe CSRF tokens are deprecated. Use 6.1 defaults or above. (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/controllers/application_controller.rb:1)
+Processing by Auth::RegistrationsController#create as */*
+  Parameters: {"email"=>"johndoe24@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:13:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "johndoe24@example.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ app/controllers/auth/registrations_controller.rb:13:in `create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["uid", "johndoe24@example.com"], ["encrypted_password", "[FILTERED]"], ["email", "johndoe24@example.com"], ["created_at", "2023-09-05 08:03:51.000312"], ["updated_at", "2023-09-05 08:03:51.000312"]]
+  ↳ app/controllers/auth/registrations_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (12.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:13:in `create'
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/controllers/auth/registrations_controller.rb:15:in `block in create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:16:in `block in create'
+  [1m[36mUser Update (0.1ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "role" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2023-09-05 08:03:51.016594"], ["role", 1], ["id", 1]]
+  ↳ app/controllers/auth/registrations_controller.rb:16:in `block in create'
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:16:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:13:in `create'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "[FILTERED]"], ["updated_at", "2023-09-05 08:03:51.086848"], ["id", 1]]
+  ↳ app/controllers/auth/registrations_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:13:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/auth/registrations_controller.rb:13:in `create'
+Completed 200 OK in 1291ms (Views: 0.3ms | ActiveRecord: 24.3ms | Allocations: 754064)
+
+
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/models/user.rb:3)
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m

@@ -2,7 +2,16 @@
 require 'faker'
 
 # Seed Brands
-5.times do
+# Define a custom list of shoe brand names
+shoe_brands = ['Nike', 'Adidas', 'Etec', 'Puma', 'Reebok', 'New Balance', 'Converse', 'Under Armour', 'Vans']
+
+# Create shoe company brands using Faker and the custom list
+shoe_brands.each do |brand_name|
+  Brand.create(name: brand_name)
+end
+
+# Create additional random brands using Faker
+(5 - shoe_brands.length).times do
   Brand.create(name: Faker::Company.unique.name)
 end
 

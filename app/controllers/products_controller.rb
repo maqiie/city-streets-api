@@ -8,7 +8,16 @@ class ProductsController < ApplicationController
       @products = Product.all
       render json: @products
     end
-  
+    def men
+        @products = Product.where(gender: 'Men')
+        render :index  # Assuming you have an index view for listing products.
+      end
+    
+      def women
+        @products = Product.where(gender: 'Women')
+        render :index
+      end
+    
     # GET /products/1
     def show
       @product = Product.find(params[:id])
