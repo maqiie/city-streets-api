@@ -3,6 +3,9 @@ class Admin::ProductsController < ApplicationController
   before_action :authenticate_admin!
   before_action :find_product, only: [:edit, :update, :destroy]
 
+
+
+  
   def index
     @products = Product.all
   end
@@ -11,22 +14,7 @@ class Admin::ProductsController < ApplicationController
     @product = Product.new
   end
 
-  # def create
-  #   @product = Product.new(product_params)
-  #   if @product.save
-  #     redirect_to admin_products_path, notice: 'Product was successfully created.'
-  #   else
-  #     render :new
-  #   end
-  # end
-  # def create
-  #   @product = Product.new(product_params)
-  #   if @product.save
-  #     flash[:notice] = 'Product was successfully created.'
-  #   else
-  #     render :new
-  #   end
-  # end
+  
   def create
     @product = Product.new(product_params)
     if @product.save
@@ -50,9 +38,21 @@ class Admin::ProductsController < ApplicationController
   end
 
   def destroy
-    @product.destroy
-    redirect_to admin_products_path, notice: 'Product was successfully deleted.'
+    if @product.destroy
+      render json: { message: 'Product was successfully deleted.' }, status: :ok
+    else
+      render json: { error: 'Failed to delete product.' }, status: :unprocessable_entity
+    end
   end
+  
+  def destroy_all
+    if Product.delete_all
+      render json: { message: 'All products were successfully deleted.' }, status: :ok
+    else
+      render json: { error: 'Failed to delete all products.' }, status: :unprocessable_entity
+    end
+  end
+  
 
   private
 

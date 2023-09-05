@@ -15,6 +15,10 @@ Rails.application.routes.draw do
   # end
   namespace :admin do
     resources :products, only: [:new, :create]
+
+    delete 'products/:id', to: 'products#destroy', as: 'delete_product'
+    delete 'destroy_all', to: 'products#destroy_all'
+
   end
   
   

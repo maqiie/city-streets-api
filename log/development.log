@@ -4372,3 +4372,211 @@ Processing by Admin::ProductsController#create as */*
 Completed 201 Created in 112ms (Views: 0.5ms | ActiveRecord: 7.7ms | Allocations: 20687)
 
 
+Started DELETE "/admin/products/1" for 127.0.0.1 at 2023-09-05 12:25:38 +0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/admin/products/1"):
+  
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/models/user.rb:3)
+Started DELETE "/admin/products/1" for 127.0.0.1 at 2023-09-05 12:26:57 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Non-URL-safe CSRF tokens are deprecated. Use 6.1 defaults or above. (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/controllers/application_controller.rb:1)
+Processing by Admin::ProductsController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "markpaulmuthuara@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:59:in `authenticate_admin!'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:45:in `find_product'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/products_controller.rb:38:in `destroy'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/admin/products_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admin/products_controller.rb:38:in `destroy'
+Redirected to http://localhost:3000/admin/products
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 302 Found in 109ms (ActiveRecord: 7.6ms | Allocations: 51082)
+
+
+Started DELETE "/admin/products" for 127.0.0.1 at 2023-09-05 12:26:57 +0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/admin/products"):
+  
+Started DELETE "/admin/products/2" for 127.0.0.1 at 2023-09-05 12:29:55 +0300
+Processing by Admin::ProductsController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "markpaulmuthuara@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:63:in `authenticate_admin!'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:49:in `find_product'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/products_controller.rb:38:in `destroy'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/admin/products_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admin/products_controller.rb:38:in `destroy'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 132ms (Views: 0.3ms | ActiveRecord: 15.2ms | Allocations: 16970)
+
+
+Started DELETE "/admin/products/destroy_all" for 127.0.0.1 at 2023-09-05 12:33:21 +0300
+Processing by Admin::ProductsController#destroy as */*
+  Parameters: {"id"=>"destroy_all"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "markpaulmuthuara@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:71:in `authenticate_admin!'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:57:in `find_product'
+Completed 404 Not Found in 84ms (ActiveRecord: 1.2ms | Allocations: 12168)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=destroy_all):
+  
+app/controllers/admin/products_controller.rb:57:in `find_product'
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/models/user.rb:3)
+Started DELETE "/admin/products/destroy_all" for 127.0.0.1 at 2023-09-05 12:35:55 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Non-URL-safe CSRF tokens are deprecated. Use 6.1 defaults or above. (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/controllers/application_controller.rb:1)
+Processing by Admin::ProductsController#destroy as */*
+  Parameters: {"id"=>"destroy_all"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "markpaulmuthuara@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:81:in `authenticate_admin!'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:60:in `find_product'
+Completed 404 Not Found in 92ms (ActiveRecord: 1.2ms | Allocations: 32295)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=destroy_all):
+  
+app/controllers/admin/products_controller.rb:60:in `find_product'
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/models/user.rb:3)
+Started DELETE "/admin/products/destroy_all" for 127.0.0.1 at 2023-09-05 12:38:39 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Non-URL-safe CSRF tokens are deprecated. Use 6.1 defaults or above. (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/controllers/application_controller.rb:1)
+Processing by Admin::ProductsController#destroy as */*
+  Parameters: {"id"=>"destroy_all"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "markpaulmuthuara@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:84:in `authenticate_admin!'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:63:in `find_product'
+Completed 404 Not Found in 91ms (ActiveRecord: 2.3ms | Allocations: 32295)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=destroy_all):
+  
+app/controllers/admin/products_controller.rb:63:in `find_product'
+Started DELETE "/admin/products/destroy_all" for 127.0.0.1 at 2023-09-05 12:39:28 +0300
+Processing by Admin::ProductsController#destroy as */*
+  Parameters: {"id"=>"destroy_all"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "markpaulmuthuara@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:86:in `authenticate_admin!'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:65:in `find_product'
+Completed 404 Not Found in 75ms (ActiveRecord: 1.2ms | Allocations: 12247)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=destroy_all):
+  
+app/controllers/admin/products_controller.rb:65:in `find_product'
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/models/user.rb:3)
+Started DELETE "/admin/products/destroy_all" for 127.0.0.1 at 2023-09-05 12:39:39 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Non-URL-safe CSRF tokens are deprecated. Use 6.1 defaults or above. (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/controllers/application_controller.rb:1)
+Processing by Admin::ProductsController#destroy as */*
+  Parameters: {"id"=>"destroy_all"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "markpaulmuthuara@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:86:in `authenticate_admin!'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:65:in `find_product'
+Completed 404 Not Found in 105ms (ActiveRecord: 1.1ms | Allocations: 32302)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=destroy_all):
+  
+app/controllers/admin/products_controller.rb:65:in `find_product'
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/models/user.rb:3)
+Started DELETE "/admin/products/destroy_all" for 127.0.0.1 at 2023-09-05 12:41:31 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Non-URL-safe CSRF tokens are deprecated. Use 6.1 defaults or above. (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/controllers/application_controller.rb:1)
+Processing by Admin::ProductsController#destroy as */*
+  Parameters: {"id"=>"destroy_all"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "markpaulmuthuara@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:82:in `authenticate_admin!'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:73:in `find_product'
+Completed 404 Not Found in 92ms (ActiveRecord: 1.3ms | Allocations: 32301)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=destroy_all):
+  
+app/controllers/admin/products_controller.rb:73:in `find_product'
+Started DELETE "/admin/products/destroy_all" for 127.0.0.1 at 2023-09-05 12:41:42 +0300
+Processing by Admin::ProductsController#destroy as */*
+  Parameters: {"id"=>"destroy_all"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "markpaulmuthuara@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:82:in `authenticate_admin!'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:73:in `find_product'
+Completed 404 Not Found in 86ms (ActiveRecord: 1.4ms | Allocations: 12245)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=destroy_all):
+  
+app/controllers/admin/products_controller.rb:73:in `find_product'
+Started DELETE "/admin/products/7" for 127.0.0.1 at 2023-09-05 12:42:35 +0300
+Processing by Admin::ProductsController#destroy as */*
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "markpaulmuthuara@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:74:in `authenticate_admin!'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/admin/products_controller.rb:60:in `find_product'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admin/products_controller.rb:41:in `destroy'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/admin/products_controller.rb:41:in `destroy'
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admin/products_controller.rb:41:in `destroy'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 91ms (Views: 0.2ms | ActiveRecord: 6.5ms | Allocations: 30972)
+
+
