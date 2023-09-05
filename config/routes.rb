@@ -3,5 +3,9 @@ Rails.application.routes.draw do
     registrations: 'auth/registrations'
   }
 
-  resources :posts
+  resources :products, only: [:index, :show, :create]
+  resources :carts, only: [:show, :update]
+  
+  post 'carts/add_item', to: 'carts#add_item'
+  delete 'carts/remove_item', to: 'carts#remove_item'
 end
