@@ -4580,3 +4580,942 @@ Processing by Admin::ProductsController#destroy as */*
 Completed 200 OK in 91ms (Views: 0.2ms | ActiveRecord: 6.5ms | Allocations: 30972)
 
 
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/models/user.rb:3)
+Started POST "/auth" for ::1 at 2023-09-07 19:17:19 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Non-URL-safe CSRF tokens are deprecated. Use 6.1 defaults or above. (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/controllers/application_controller.rb:1)
+Processing by Auth::RegistrationsController#create as HTML
+  Parameters: {"email"=>"markpaulmuthaura@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "markpaulmuthaura@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["uid", "markpaulmuthaura@gmail.com"], ["encrypted_password", "[FILTERED]"], ["email", "markpaulmuthaura@gmail.com"], ["created_at", "2023-09-07 16:17:20.865028"], ["updated_at", "2023-09-07 16:17:20.865028"]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (79.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/controllers/auth/registrations_controller.rb:8:in `block in create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "[FILTERED]"], ["updated_at", "2023-09-07 16:17:21.021247"], ["id", 2]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (72.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+Completed 200 OK in 1381ms (Views: 0.5ms | ActiveRecord: 153.7ms | Allocations: 991418)
+
+
+Started POST "/auth" for ::1 at 2023-09-07 19:30:45 +0300
+Processing by Auth::RegistrationsController#create as HTML
+  Parameters: {"email"=>"markpaulmuthaura@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "markpaulmuthaura@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+Completed 422 Unprocessable Entity in 201ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 3657)
+
+
+Started POST "/auth" for ::1 at 2023-09-07 19:31:05 +0300
+Processing by Auth::RegistrationsController#create as HTML
+  Parameters: {"email"=>"markpaulmuthaura0@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "markpaulmuthaura0@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["uid", "markpaulmuthaura0@gmail.com"], ["encrypted_password", "[FILTERED]"], ["email", "markpaulmuthaura0@gmail.com"], ["created_at", "2023-09-07 16:31:05.959796"], ["updated_at", "2023-09-07 16:31:05.959796"]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (93.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/controllers/auth/registrations_controller.rb:8:in `block in create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "[FILTERED]"], ["updated_at", "2023-09-07 16:31:06.131804"], ["id", 3]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (70.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+Completed 200 OK in 455ms (Views: 0.2ms | ActiveRecord: 165.0ms | Allocations: 6574)
+
+
+Started POST "/auth" for ::1 at 2023-09-07 19:31:35 +0300
+Processing by Auth::RegistrationsController#create as HTML
+  Parameters: {"email"=>"markpaulmuthaura9@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "markpaulmuthaura9@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["uid", "markpaulmuthaura9@gmail.com"], ["encrypted_password", "[FILTERED]"], ["email", "markpaulmuthaura9@gmail.com"], ["created_at", "2023-09-07 16:31:35.934866"], ["updated_at", "2023-09-07 16:31:35.934866"]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (91.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/controllers/auth/registrations_controller.rb:8:in `block in create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "[FILTERED]"], ["updated_at", "2023-09-07 16:31:36.104965"], ["id", 4]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (70.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+Completed 200 OK in 444ms (Views: 0.6ms | ActiveRecord: 163.1ms | Allocations: 6483)
+
+
+Started POST "/auth" for ::1 at 2023-09-07 19:31:51 +0300
+Processing by Auth::RegistrationsController#create as HTML
+  Parameters: {"email"=>"markpaulmuthaura8@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "markpaulmuthaura8@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["uid", "markpaulmuthaura8@gmail.com"], ["encrypted_password", "[FILTERED]"], ["email", "markpaulmuthaura8@gmail.com"], ["created_at", "2023-09-07 16:31:51.582298"], ["updated_at", "2023-09-07 16:31:51.582298"]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (85.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/controllers/auth/registrations_controller.rb:8:in `block in create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "[FILTERED]"], ["updated_at", "2023-09-07 16:31:51.745003"], ["id", 5]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (79.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+Completed 200 OK in 445ms (Views: 0.3ms | ActiveRecord: 166.2ms | Allocations: 6469)
+
+
+Started POST "/auth/sign_in" for ::1 at 2023-09-07 19:33:09 +0300
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"markpaulmuthaura@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "markpaulmuthaura@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "[FILTERED]"], ["updated_at", "2023-09-07 16:33:09.454643"], ["id", 2]]
+  [1m[36mTRANSACTION (74.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 383ms (Views: 0.4ms | ActiveRecord: 75.4ms | Allocations: 8144)
+
+
+Started POST "/auth/sign_in" for ::1 at 2023-09-07 19:33:21 +0300
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"markpaulmuthaura@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "markpaulmuthaura@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "[FILTERED]"], ["updated_at", "2023-09-07 16:33:21.871952"], ["id", 2]]
+  [1m[36mTRANSACTION (89.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 341ms (Views: 0.3ms | ActiveRecord: 90.4ms | Allocations: 6760)
+
+
+Started POST "/auth" for ::1 at 2023-09-07 19:33:50 +0300
+Started POST "/auth" for ::1 at 2023-09-07 19:33:50 +0300
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 205)
+
+
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 4ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 178)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 19:33:51 +0300
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 182)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 19:33:51 +0300
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started POST "/auth/sign_in" for ::1 at 2023-09-07 19:33:57 +0300
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"markpaulmuthaura@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "markpaulmuthaura@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "[FILTERED]"], ["updated_at", "2023-09-07 16:33:57.556434"], ["id", 2]]
+  [1m[36mTRANSACTION (69.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 319ms (Views: 0.3ms | ActiveRecord: 70.4ms | Allocations: 7103)
+
+
+Started POST "/auth" for ::1 at 2023-09-07 19:45:36 +0300
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 19:45:36 +0300
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 185)
+
+
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started POST "/auth" for ::1 at 2023-09-07 19:45:38 +0300
+Started POST "/auth" for ::1 at 2023-09-07 19:45:38 +0300
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 19:45:38 +0300
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 184)
+
+
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 178)
+
+
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 19:45:38 +0300
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started POST "/auth" for ::1 at 2023-09-07 19:45:52 +0300
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 19:45:52 +0300
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 19:47:21 +0300
+Started POST "/auth" for ::1 at 2023-09-07 19:47:21 +0300
+Started POST "/auth" for ::1 at 2023-09-07 19:47:21 +0300
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 181)
+
+
+Processing by Auth::RegistrationsController#create as HTML
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 19:47:21 +0300
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 194)
+
+
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started POST "/auth" for ::1 at 2023-09-07 19:51:46 +0300
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 19:51:46 +0300
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 180)
+
+
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started POST "/auth/sign_in" for ::1 at 2023-09-07 19:51:53 +0300
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"markpaulmuthaura@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "markpaulmuthaura@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "[FILTERED]"], ["updated_at", "2023-09-07 16:51:54.058368"], ["id", 2]]
+  [1m[36mTRANSACTION (139.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 396ms (Views: 0.4ms | ActiveRecord: 141.1ms | Allocations: 7260)
+
+
+Started POST "/auth/sign_in" for ::1 at 2023-09-07 19:52:11 +0300
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"markpaulmuthaura@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "markpaulmuthaura@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "[FILTERED]"], ["updated_at", "2023-09-07 16:52:11.606979"], ["id", 2]]
+  [1m[36mTRANSACTION (70.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 323ms (Views: 0.3ms | ActiveRecord: 70.9ms | Allocations: 6905)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:09:34 +0300
+Started POST "/auth" for ::1 at 2023-09-07 20:09:34 +0300
+Started POST "/auth" for ::1 at 2023-09-07 20:09:34 +0300
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 187)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:09:34 +0300
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 178)
+
+
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started POST "/auth/sign_in" for ::1 at 2023-09-07 20:09:43 +0300
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", ""], ["provider", "email"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1263)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:09:44 +0300
+Started POST "/auth" for ::1 at 2023-09-07 20:09:44 +0300
+Started POST "/auth" for ::1 at 2023-09-07 20:09:44 +0300
+Processing by Auth::RegistrationsController#create as HTML
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 178)
+
+
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 640)
+
+
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:09:44 +0300
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started POST "/auth/sign_in" for ::1 at 2023-09-07 20:10:08 +0300
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", ""], ["provider", "email"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 1049)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:10:09 +0300
+Started POST "/auth" for ::1 at 2023-09-07 20:10:09 +0300
+Started POST "/auth" for ::1 at 2023-09-07 20:10:09 +0300
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 180)
+
+
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 182)
+
+
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:10:09 +0300
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/models/user.rb:3)
+Started POST "/auth/sign_in" for ::1 at 2023-09-07 20:10:21 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Non-URL-safe CSRF tokens are deprecated. Use 6.1 defaults or above. (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/controllers/application_controller.rb:1)
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", ""], ["provider", "email"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 1251ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 978927)
+
+
+Started POST "/auth" for ::1 at 2023-09-07 20:10:22 +0300
+Started POST "/auth" for ::1 at 2023-09-07 20:10:22 +0300
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:10:22 +0300
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 433)
+
+
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 178)
+
+
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 114)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:10:22 +0300
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started POST "/auth" for ::1 at 2023-09-07 20:21:24 +0300
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:21:24 +0300
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 181)
+
+
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started POST "/auth" for ::1 at 2023-09-07 20:21:37 +0300
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:21:37 +0300
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 182)
+
+
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started POST "/auth" for ::1 at 2023-09-07 20:21:42 +0300
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:21:42 +0300
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 182)
+
+
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started POST "/auth" for ::1 at 2023-09-07 20:21:43 +0300
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:21:43 +0300
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 182)
+
+
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started POST "/auth" for ::1 at 2023-09-07 20:36:52 +0300
+Started POST "/auth" for ::1 at 2023-09-07 20:36:52 +0300
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:36:52 +0300
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 180)
+
+
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:36:52 +0300
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started POST "/auth/sign_in" for ::1 at 2023-09-07 20:36:54 +0300
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"markpaulmuthaura@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "markpaulmuthaura@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "[FILTERED]"], ["updated_at", "2023-09-07 17:36:55.162730"], ["id", 2]]
+  [1m[36mTRANSACTION (72.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 347ms (Views: 0.3ms | ActiveRecord: 73.9ms | Allocations: 20370)
+
+
+Started POST "/auth" for ::1 at 2023-09-07 20:38:13 +0300
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:38:13 +0300
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 125)
+
+
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 183)
+
+
+Started POST "/auth/sign_in" for ::1 at 2023-09-07 20:38:19 +0300
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"markpaulmuthaura@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "markpaulmuthaura@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "[FILTERED]"], ["updated_at", "2023-09-07 17:38:19.346556"], ["id", 2]]
+  [1m[36mTRANSACTION (67.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 329ms (Views: 0.2ms | ActiveRecord: 67.6ms | Allocations: 7067)
+
+
+Started POST "/auth/sign_in" for ::1 at 2023-09-07 20:38:41 +0300
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"markpaulmuthaura@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "markpaulmuthaura@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "[FILTERED]"], ["updated_at", "2023-09-07 17:38:41.275631"], ["id", 2]]
+  [1m[36mTRANSACTION (78.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 328ms (Views: 0.3ms | ActiveRecord: 79.0ms | Allocations: 7099)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:39:39 +0300
+Started POST "/auth" for ::1 at 2023-09-07 20:39:39 +0300
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 178)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:39:52 +0300
+Started POST "/auth" for ::1 at 2023-09-07 20:39:52 +0300
+Started POST "/auth" for ::1 at 2023-09-07 20:39:52 +0300
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 252)
+
+
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 181)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:39:53 +0300
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started POST "/auth/sign_in" for ::1 at 2023-09-07 20:39:59 +0300
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"markpaulmuthaura@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "markpaulmuthaura@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "[FILTERED]"], ["updated_at", "2023-09-07 17:39:59.765281"], ["id", 2]]
+  [1m[36mTRANSACTION (66.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 316ms (Views: 0.3ms | ActiveRecord: 67.2ms | Allocations: 7137)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:44:55 +0300
+Started POST "/auth" for ::1 at 2023-09-07 20:44:55 +0300
+Started POST "/auth" for ::1 at 2023-09-07 20:44:55 +0300
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:44:55 +0300
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 210)
+
+
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 178)
+
+
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:44:58 +0300
+Started POST "/auth" for ::1 at 2023-09-07 20:44:58 +0300
+Started POST "/auth" for ::1 at 2023-09-07 20:44:58 +0300
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:44:58 +0300
+Completed 422 Unprocessable Entity in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 326)
+
+
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 178)
+
+
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started POST "/auth/sign_in" for ::1 at 2023-09-07 20:45:04 +0300
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"markpaulmuthaura@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "markpaulmuthaura@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "[FILTERED]"], ["updated_at", "2023-09-07 17:45:04.665530"], ["id", 2]]
+  [1m[36mTRANSACTION (81.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 345ms (Views: 0.4ms | ActiveRecord: 82.6ms | Allocations: 7172)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:45:38 +0300
+Started POST "/auth" for ::1 at 2023-09-07 20:45:38 +0300
+Started POST "/auth" for ::1 at 2023-09-07 20:45:38 +0300
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 181)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:45:38 +0300
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 178)
+
+
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started POST "/auth/sign_in" for ::1 at 2023-09-07 20:45:41 +0300
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"markpaulmuthaura@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "markpaulmuthaura@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "[FILTERED]"], ["updated_at", "2023-09-07 17:45:42.244933"], ["id", 2]]
+  [1m[36mTRANSACTION (83.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 353ms (Views: 0.3ms | ActiveRecord: 84.0ms | Allocations: 7169)
+
+
+Started POST "/auth/sign_in" for ::1 at 2023-09-07 20:45:45 +0300
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"markpaulmuthaura@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "markpaulmuthaura@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "[FILTERED]"], ["updated_at", "2023-09-07 17:45:45.727119"], ["id", 2]]
+  [1m[36mTRANSACTION (50.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 318ms (Views: 0.2ms | ActiveRecord: 51.5ms | Allocations: 7158)
+
+
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/models/user.rb:3)
+Started POST "/auth" for ::1 at 2023-09-07 20:48:33 +0300
+Started POST "/auth" for ::1 at 2023-09-07 20:48:33 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Non-URL-safe CSRF tokens are deprecated. Use 6.1 defaults or above. (called from block (3 levels) in <class:Railtie> at /var/lib/gems/3.1.0/gems/actionpack-7.0.7/lib/action_controller/railtie.rb:80)
+Processing by Auth::RegistrationsController#create as HTML
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 2198ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1670223)
+
+
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 2202ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1672721)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:48:35 +0300
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 326)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:48:35 +0300
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started POST "/auth/sign_in" for ::1 at 2023-09-07 20:48:41 +0300
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"markpaulmuthaura@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "markpaulmuthaura@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "[FILTERED]"], ["updated_at", "2023-09-07 17:48:42.146330"], ["id", 2]]
+  [1m[36mTRANSACTION (79.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 368ms (Views: 0.3ms | ActiveRecord: 81.0ms | Allocations: 23091)
+
+
+Started POST "/auth" for ::1 at 2023-09-07 20:49:42 +0300
+Processing by Auth::RegistrationsController#create as HTML
+  Parameters: {"email"=>"mwenda@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "mwenda@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["uid", "mwenda@gmail.com"], ["encrypted_password", "[FILTERED]"], ["email", "mwenda@gmail.com"], ["created_at", "2023-09-07 17:49:42.609789"], ["updated_at", "2023-09-07 17:49:42.609789"]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (79.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/controllers/auth/registrations_controller.rb:8:in `block in create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "[FILTERED]"], ["updated_at", "2023-09-07 17:49:42.767305"], ["id", 6]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (79.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+Completed 200 OK in 439ms (Views: 0.4ms | ActiveRecord: 159.7ms | Allocations: 7082)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:55:12 +0300
+Started POST "/auth" for ::1 at 2023-09-07 20:55:12 +0300
+Started POST "/auth" for ::1 at 2023-09-07 20:55:12 +0300
+Started POST "/auth" for ::1 at 2023-09-07 20:55:12 +0300
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 185)
+
+
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 107)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:55:12 +0300
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 178)
+
+
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 180)
+
+
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 20:55:12 +0300
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started POST "/auth" for ::1 at 2023-09-07 20:55:19 +0300
+Processing by Auth::RegistrationsController#create as HTML
+  Parameters: {"email"=>"mwenda@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "mwenda@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+Completed 422 Unprocessable Entity in 196ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 3421)
+
+
+Started POST "/auth/sign_in" for ::1 at 2023-09-07 20:55:35 +0300
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"mwenda@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "mwenda@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "[FILTERED]"], ["updated_at", "2023-09-07 17:55:35.266277"], ["id", 6]]
+  [1m[36mTRANSACTION (129.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 381ms (Views: 0.5ms | ActiveRecord: 129.8ms | Allocations: 6691)
+
+
+Started POST "/auth/sign_in" for ::1 at 2023-09-07 20:55:49 +0300
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"mwenda@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "mwenda@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "[FILTERED]"], ["updated_at", "2023-09-07 17:55:49.718377"], ["id", 6]]
+  [1m[36mTRANSACTION (75.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 330ms (Views: 0.3ms | ActiveRecord: 76.4ms | Allocations: 6733)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 21:01:02 +0300
+Started POST "/auth" for ::1 at 2023-09-07 21:01:02 +0300
+Started POST "/auth" for ::1 at 2023-09-07 21:01:02 +0300
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 21:01:02 +0300
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 180)
+
+
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 178)
+
+
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 21:01:04 +0300
+Started POST "/auth" for ::1 at 2023-09-07 21:01:04 +0300
+Started POST "/auth" for ::1 at 2023-09-07 21:01:04 +0300
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 188)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 21:01:04 +0300
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 178)
+
+
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 106)
+
+
+Started POST "/auth/sign_in" for ::1 at 2023-09-07 21:01:11 +0300
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"mwenda@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "mwenda@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "[FILTERED]"], ["updated_at", "2023-09-07 18:01:11.404996"], ["id", 6]]
+  [1m[36mTRANSACTION (490.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 741ms (Views: 0.4ms | ActiveRecord: 490.7ms | Allocations: 6790)
+
+
+DEPRECATION WARNING: Using legacy connection handling is deprecated. Please set
+`legacy_connection_handling` to `false` in your application.
+
+The new connection handling does not support `connection_handlers`
+getter and setter.
+
+Read more about how to migrate at: https://guides.rubyonrails.org/active_record_multiple_databases.html#migrate-to-the-new-connection-handling
+ (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/models/user.rb:3)
+Started POST "/auth/sign_in" for ::1 at 2023-09-07 21:02:13 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Non-URL-safe CSRF tokens are deprecated. Use 6.1 defaults or above. (called from <top (required)> at /home/markpaul/projects/city-streets-api/app/controllers/application_controller.rb:1)
+Processing by DeviseTokenAuth::SessionsController#create as HTML
+  Parameters: {"email"=>"mwenda@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "mwenda@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "[FILTERED]"], ["updated_at", "2023-09-07 18:02:14.331821"], ["id", 6]]
+  [1m[36mTRANSACTION (83.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 379ms (Views: 0.4ms | ActiveRecord: 85.1ms | Allocations: 23138)
+
+
+Started POST "/auth" for ::1 at 2023-09-07 21:04:11 +0300
+Processing by Auth::RegistrationsController#create as HTML
+  Parameters: {"email"=>"mwenda1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "mwenda1@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["uid", "mwenda1@gmail.com"], ["encrypted_password", "[FILTERED]"], ["email", "mwenda1@gmail.com"], ["created_at", "2023-09-07 18:04:12.692747"], ["updated_at", "2023-09-07 18:04:12.692747"]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (47.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/controllers/auth/registrations_controller.rb:8:in `block in create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "[FILTERED]"], ["updated_at", "2023-09-07 18:04:12.801759"], ["id", 7]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (139.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/auth/registrations_controller.rb:6:in `create'
+Completed 200 OK in 1297ms (Views: 0.4ms | ActiveRecord: 187.8ms | Allocations: 976861)
+
+
+Started POST "/auth" for ::1 at 2023-09-07 21:04:44 +0300
+Started POST "/auth" for ::1 at 2023-09-07 21:04:44 +0300
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 21:04:44 +0300
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 182)
+
+
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 122)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 21:04:44 +0300
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 110)
+
+
+Started POST "/auth" for ::1 at 2023-09-07 21:04:48 +0300
+Started POST "/auth" for ::1 at 2023-09-07 21:04:48 +0300
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 21:04:48 +0300
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 185)
+
+
+Processing by Auth::RegistrationsController#create as HTML
+Filter chain halted as :validate_sign_up_params rendered or redirected
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 182)
+
+
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 110)
+
+
+Started GET "/auth/sign_in" for ::1 at 2023-09-07 21:04:48 +0300
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+Completed 405 Method Not Allowed in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 110)
+
+
